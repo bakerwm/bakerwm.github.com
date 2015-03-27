@@ -10,9 +10,9 @@ tags:
 comments: false
 ---
 
-![image]({{ base.url }}/assets/images/2014_Happy_birthday_to_Ying.png) 
+<img href="" src="{{ base.url }}/assets/images/2014_Happy_birthday_to_Ying.png" alt="Happy birthday" border="0" width="720"/>    
 
-![image]({{ base.url }}/assets/images/2014_Rose.png)
+<img href="" src="{{ base.url }}/assets/images/2014_Rose.png" alt="Happy birthday" border="0" width="720"/> 
 
 Find the R code [Here](https://github.com/bakerwm/R_graphics_ming/blob/master/plot_heart.md).
 

@@ -583,13 +583,13 @@ img.maruku-png { }
 	padding:2px;
 	overflow:hidden;
     font-size: 12px;
-    color: #FF555A;
 }
 .tag_box li {
 	list-style:none;
 	line-height:13px;
 }
 .tag_box.inline li {
+    margin: 1px;
     padding: 4px;
 	float:left;
 }
@@ -600,6 +600,8 @@ img.maruku-png { }
 	border-radius: 3px;
 	border:1px dashed #ccc;
 	text-decoration:none;
+    color: #DF0101;
+    font-size: 11px;
 }
 .tag_box a span{
 	vertical-align:super;
