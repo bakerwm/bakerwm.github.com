@@ -1,0 +1,194 @@
+---
+layout: post
+title: 安装Ubuntu 14.04 之后需要做的几件事
+description: ""
+category: ubuntu
+tags: [ubuntu, install]
+---
+使用中文界面的Ubuntu，需要做一些调整，更方便使用。主要包括系统优化、软件安装。
+
+## 1. 更改软件更新源：  
+在系统设置 -> Ubuntu 软件 -> 下载自，调整镜像为 http:// mirrors.163.com    
+
+## 2. 安装软件：    
+* 1) 新立得件管理包：在`Ubuntu软件中心`搜索 新立得 即可。    
+* 2) Chromium: 在`Ubuntu软件中心`搜索并安装 chromium    
+* 3) 搜狗拼音for Linux：前往http://pinyin.sogou.com/linux/ 下载搜狗输入法for Linux, Ubuntu 14.04可直接双击deb包安装。    
+* 4) WPS office for Linux: 前往http://community.wps.cn/download/下载最新版 deb 包，双击安装即可    
+* 5) VLC媒体播放器
+
+## 3. 系统美化    
+
+* 1 更改中文字体    
+安装文泉驿黑字体   
+
+```
+sudo apt-get install ttf-wqy-microhei
+```
+
+* 2 删除原默认字体 ukai, uming    
+
+```
+sudo apt-get remove fonts-arphic-ukai fonts-arphic-uming 
+```
+
+* 3 主题美化工具    
+在`Ubuntu软件中心`安装美化工具 `Unity Tweak Tool`    
+或者前往 http://ubuntu-twewak.com/ 下载 `Ubuntu Tweak`的deb包，双击安装即可。    
+
+## 4. Adobe Flash Player
+* 1 安装Adobe Flash Player (pepper flash player)
+
+```
+sudo apt-get update
+sudo apt-get install chromium-browser
+sudo apt-get install pepperflashplugin-nonfree
+sudo update-pepperflashplugin-nonfree --install
+```
+
+* 2 软件中心搜索adobe flash player安装即可
+
+## 5. 安装Bioinfo-tools    
+* 1 R 3.1.1 for ubuntu 14.04
+
+```
+sudo add-apt-repository ppa:marutter/rrutter
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install r-base r-base-dev
+```
+
+* 2 Rstudio for ubuntu 14.04    
+前往 http://www.rstudio.com/products/rstudio/download/ 下载相应版本的 deb 包，双击安装。
+
+* 3 Bioconductor
+
+```R
+source("http://bioconductor.org/biocLite.R")
+biocLite()
+```
+
+## 6. 安装Jekyll & git 管理github上的blog    
+Jekyll 2 was recently released and can be installed on Ubuntu 14.04 using `apt-get` and `gem install`. Additional features such as Rdiscount can be added with the same meth od. Although there are packages for Jekyll in the Ubuntu repository, the packages are for older versions of Jekyll.
+See the reference:[Install Jekyll 2 on Ubuntu 14.04](http://michaelchelen.net/81fa/install-jekyll-2-ubuntu-14-04/)    
+### Step 1 Insall Prerequisites   
+Install ruby, the ruby development libraries, and the make command.
+
+```
+sudo apt-get install ruby ruby-dev make
+```
+
+### Step 2 Install Jekyll    
+Install the Jekyll gem system wide. To include all documentation, omit the `--no-rdoc  --no-ri` switches.
+
+```
+sudo gem install jekyll --no-rdoc  --no-ri
+```
+
+### Step 3 ExecJS Workaround    
+Install **nodejs** to work around this issue
+
+```
+sudo apt-get install nodejs
+```
+
+### Step 4 Start Jekyll    
+Check that Jekyll has been successfully installed.    
+
+```
+jekyll -v
+```
+
+### Step 5 Recommended    
+Install other required packages.  
+
+``` 
+# Install git
+sudo apt-get install git
+
+# Install Rdiscount Markdown renderer
+sudo gem install rdiscount  --no-rdoc --no-ri
+
+# Install Redcarpet Markdown renderer
+sudo gem install redcarpet  --no-rdoc --no-ri
+
+# Install 汉字to拼音 
+sudo gem install hz2py --no-rdoc --no-ri
+```
+
+### Check you site locally    
+Start the website website HTML and start a local server.
+
+```
+jekyll serve
+```
+
+# 6. 安装Bioinfo-tools
+* 1 R 3.1.1 for ubuntu 14.04    
+
+```
+sudo add-apt-repository ppa:marutter/rrutter
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install r-base r-base-dev
+```
+
+* 2 Rstudio for ubuntu 14.04    
+前往 http://www.rstudio.com/products/rstudio/download/ 下载相应版本的 deb 包，双击安装。
+
+* 3 Bioconductor    
+
+```
+source("http://bioconductor.org/biocLite.R")
+biocLite()
+```
+
+* 4 Biopython
+a. Install Biopython dependencies
+Numerical Python (NumPy)
+sudo apt-get install python-numpy python-scipy
+
+```
+# Check 
+>>> import numpy
+```
+
+b. Install ReportLab
+The ReportLab package is a library for generating PDF documents.
+
+```
+sudo pip install rlextra 
+-i https://wangm08@yeah.net:gongpeng!110@www.reportlab.com/pypi/
+# For an automated install, the command line must split over separate lines.
+
+# Check
+>>> from reportlab.graphics import renderPDF
+```
+
+c. Install Biopython
+Download biopython distribution: http://biopython.org/wiki/Download.
+Unpack the file with "tar -xzvpf biopython-**.tar.gz"
+Then move into the biopython* directory, and then install biopython with "sudo python setup.py install"
+
+d. Check everything is worked
+Option 1:
+
+```python
+>>> from Bio.Seq import Seq
+>>> from Bio.Alphabet.IUPAC import unambiguous_dna
+>>> seq = Seq('GATCAGAAG', unambiguous_dna)
+>>> seq[0:2]
+>>> seq.translate()
+```
+
+Option 2:
+
+```
+python setup.py test
+```
+
+* 5 Install third-party tools from Synaptic    
+a. NCBI Standalone BLAST    
+b. clustalo, libargtable,    
+c. EMBOSS,     
+
