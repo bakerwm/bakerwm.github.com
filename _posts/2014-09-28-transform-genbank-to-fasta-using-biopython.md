@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 使用BioPytho将GenBank转换为Fasta格式
+title: 使用BioPython将GenBank转换为Fasta格式
 description: 从GenBank文件中提取基因信息
 category: Biopython
 tags: [Biopython, GenBank, fasta]
