@@ -5,7 +5,7 @@ comments: yes
 ---
 {% include JB/setup %}
 
-<p><img href="" src="{{ base.url }}/assets/images/Aboutme.jpg" alt="@Dalian" align="middle" width="720" /> </p>
+<p><img href="" src="{{ base.url }}/assets/images/Aboutme.jpg" alt="@Dalian" align="middle" width=100% /> </p>
 
 ## Write  **[M.]**    
 
