@@ -21,9 +21,9 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,p,blockquote,th,t
 /* @end */
 
 body {
-	font-family: Galdeano,"Hiragino Sans GB","Microsoft YaHei",Trebuchet,"Trebuchet MS",Tahoma,"Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif,"Helvetica","Microsoft YaHei",sans-serif,Palatino,serif;
+	font-family: "Hiragino Sans GB","Microsoft YaHei",Trebuchet,"Trebuchet MS",Tahoma,"Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif,"Helvetica","Microsoft YaHei",sans-serif,Palatino,serif;
 	background-color: whitesmoke;
-	background-position: center;
+	background-position: center -5em;
 	#background-repeat: repeat-x; 
 }
 
@@ -38,38 +38,47 @@ p {
 }
 
 a { text-decoration: none; color: #339; }
-a:hover { text-decoration: underline; color: #33f; }
+a: { text-decoration: underline; color: #33f; }
 a.pdf:before { 
 	margin-right: 1em;
-	content: url(/files/css/icon_pdf.gif); }
+	content: url(/files/css/icon_pdf.gif); 
+}
 
 h1,h2,h3,h4 { 
-	font-weight: bold; 
+	font-weight: bold;
+    line-height: 120%;
 	clear: left; 	
-	font-family: Galdeano,"Hiragino Sans GB","Microsoft YaHei",Trebuchet,"Trebuchet MS",Tahoma,"Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif,"Helvetica",'lucida grande', sans-serif; 
+	font-family: "Hiragino Sans GB","Microsoft YaHei",Trebuchet,"Trebuchet MS",Tahoma,"Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif,"Helvetica",'lucida grande', sans-serif; 
 }
 
 h1 { 
-	font-size: 20px;
-	line-height: 26px;
-	margin: 10px 0 5px 0;
-	font-weight:bold;
+	line-height: 1.6em;
+	margin: 0.5em 0 0.5em 0;
+	font-weight: bold;
+    color: #151515;
+}
+/*
+h1 ol{
+    font-size: 1.2em;
+    line-height: 120%;
+    margin: 0.5em 0 0.5em 0;
+    font-weight: bold;
     color: #151515;
 }
 
-h2,ol {
-	font-size: 16px;
-	line-height: 18px;
-	margin:10px 0 10px 0;
-	font-weight:bold;
+h2 ol {
+	font-size: 1.2em;
+	line-height: 120%;
+	margin: 0.5em 0 0.5em 0;
+	font-weight: bold;
     color: #151515;
 }
-
+*/
 h3,h4,h5 {
-   	font-size: 15px;
-	line-height: 17px;
-	margin:5px 0 5px 0;
-	font-weight:bold;
+   	font-size: 1.2em;
+	line-height: 2em;
+	margin: 0.7em 0 0.7em 0;
+	font-weight: bold;
     color: #151515;
 }
 
@@ -83,17 +92,39 @@ hr {
 sup { line-height: 1ex; }
 
 #site {
-	max-width: 900px;
-	margin: 10px auto 10px auto;
-	line-height:1.5em;
+	max-width: 65em;
+	margin: 0.1em auto 3em auto;
+	line-height: 1.2em;
+}
+
+#page h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 120%;
+    margin: 0.5em 0 0.5em 0;
+    padding-bottom: 0.5em;
+}
+
+#page h2,h3,h4,h5 {
+    font-size: 1.1em;
+    font-weight: bold;
+    line-height: 120%;
+    padding: 0.5em 0 0.5em 0;
+}
+
+#page p {
+    font-size: 0.9em;
+    font-weight: normal;
+    line-height: 120%;
+    padding: 0.3em 0 0.3em 0;
 }
 
 #page, #disqus_thread {
 	background: white;
 /*	background-image: url(grid.png); */
-	padding: 3em 3em 1.5em 3em;
+	padding: 0.5em 4em 2em 4em;
 	border: 1px solid #ccc;
-    margin-top: 15px;
+    margin-top: 0.8em;
 }
 
 /* More experimental CSS3 features */
@@ -159,12 +190,13 @@ sup { line-height: 1ex; }
 	line-height: 1.714em;
 }
 blockquote {
-	padding: 10px 10px;
-	margin-left:15px;
-    #margin-top: 5px;
+	padding: 0.2em 1.5em 0.2em 1.5em;
+	margin-left: 1.2em;
+    margin-bottom: 0;
+
 	color: 848484;
-	font-size: 13px;
-	#line-height: 15px;
+	font-size: 1em;
+	line-height: 120%;
     border-left: 2px solid #D8D8D8;
 }
 
@@ -232,28 +264,28 @@ ul.compact li a {
 #header, #header a {
     color: #585858;
     border-bottom: none;
-  }
+}
 /*#header .hover { color: transparent; } */
 #header:hover a { 
-    color: #2E2E2E;
+    color: black;
     border-bottom: none;
+    text-decoration: none;
 }
 /*#header:hover a:hover { text-decoration: none; }*/
 #header a:hover .hover { color: #2E2E2E; border-bottom: none; }
 #header {
 	position: relative;
-	line-height: 20px;
-	margin-top: 20px;
-	#margin-bottom: 10px;
-    font-size: 18px;
+	line-height: 1.5em;
+
+	margin-bottom: 0;
+    font-size: 1.2em;
 }
 
 #header h1 {
-    font-family: Galdeano,"Hiragino Sans GB","Microsoft YaHei",Trebuchet,"Trebuchet MS",Tahoma,"Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif,"Helvetica","Microsoft YaHei";
-    font-size: 30px;
+    font-family: "Hiragino Sans GB","Microsoft YaHei",Trebuchet,"Trebuchet MS",Tahoma,"Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif,"Helvetica","Microsoft YaHei";
+    font-size: 1.2em;
+    line-height: 120%;
     font-weight: bold;
-	margin-bottom: 0;
-	line-height: 20px;
 	display: block;
 }
 
@@ -262,27 +294,30 @@ ul.compact li a {
 	top: 0;
 	right: 0;
 	font-size: 100%;
-	line-height: 20px;
 	display: block;
 	margin: 0;
-	width: 75%;
+	width: 80%;
 	text-align: right;
 }
 #header ul li { 
     display: inline; 
 }
 #header ul li a {
-    font-size: 17px;
-	padding: 0.4em 0.3em 0 0.3em;
+    font-size: 1.1em;
+    line-height: 200%;
+	padding: 0.3em;
 	display: inline;
 }
+
 #header ul li a:hover {
 	color: #1C1C1C;
-    background-color: #E6E6E6;
+    background-color: #A4A4A4;
+    line-height: 120%;
 }
+
 #header .byline {
 	color: silver;
-	font-size: 18px;
+	font-size: 0.9em;
 	line-height: 75%
 }
 #header:hover .byline a { color: silver; text-shadow: none; }
@@ -331,7 +366,7 @@ body#Kith #header a.kith
 }
 .section h1 {
 	font-family: Galdeano,Trebuchet,"Trebuchet MS",Tahoma,Verdana,sans-serif,Palatino,georgia, serif;
-	font-size: 100%;
+	font-size: 1.3em;
 	line-height: 1.43em;
 	position: absolute;
 	width: 6em;
@@ -385,8 +420,8 @@ p.excerpt { margin: 0; }
 /* @group Code */
 pre {
 	margin: 1em 0 1.5em 0;
-	font-size: 14px; /* Hack to make code look same size as body font */  
-	line-height: 16px;	
+	font-size: 0.9em; /* Hack to make code look same size as body font */  
+	line-height: 1.2em;	
 	color: #111;
 	background: #F2F2F2;
 	border: 1px solid #ddc;
@@ -405,9 +440,9 @@ pre:hover {
 }
 code {
     font-family: "Courier New",monospace,Monaco,Menlo;
-	font-size: 14px;
+	font-size: 0.9em;
 	background-color: #F2F2F2;
-	line-height: 18px;
+	line-height: 120%;
 }
 pre > code {
 	background-color: transparent;
@@ -494,8 +529,8 @@ div.LTprovided { display: none; }
 }
 .delicious-posts li { 
     list-style-position: outside; 
-    margin-bottom: 10px; 
-    margin-left: 20px; 
+    margin-bottom: 0.8em; 
+    margin-left: 0.8em; 
     text-align: justify; 
 }
 
@@ -512,8 +547,9 @@ p.delicious-extended:before { content: ' — '; }
 #footer {
 	margin-top: 0;
 	color: grey;
-	font-size: 75%;
+	font-size: 80%;
 	line-height: 1.3em;
+    font-size: 0.7em;
 }
 #footer address {
 	position: relative;
@@ -523,7 +559,7 @@ p.delicious-extended:before { content: ' — '; }
 #footer a {
 	font-variant: small-caps;
 	font-style: normal;
-    font-size: 13px;
+    font-size: 0.7em;
 	color: #77d;
 	text-decoration: none;
 }
@@ -612,4 +648,4 @@ img.maruku-png { }
 	border:1px solid #4C964D;
 	color:#FFF;
 }
-
+hover

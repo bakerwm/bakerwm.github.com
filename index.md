@@ -7,10 +7,10 @@ tagline: Supporting tagline
 
 # Mapping reads to genome. 
 
-<img href="" src="{{ base.url }}/assets/images/Reads-mapping-to-Ra&Rv-ep.png" alt="RNA-Seq Mapping" border="0" width=100%/>    
-
-<small>RNA-Seq analysis for bacteria.</small>
-
+<figure>
+    <img href="" src="{{ base.url }}/assets/images/Reads-mapping-to-Ra&Rv-ep.png" alt="RNA-Seq Mapping" border="0" width=100%/>    
+    <figurecaption>Figure. RNA-Seq analysis for bacteria.</figurecaption>
+</figure>
 
 =====================================
 
