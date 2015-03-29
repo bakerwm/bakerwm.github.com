@@ -22,9 +22,9 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,p,blockquote,th,t
 
 body {
 	font-family: "Hiragino Sans GB","Microsoft YaHei",Trebuchet,"Trebuchet MS",Tahoma,"Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif,"Helvetica","Microsoft YaHei",sans-serif,Palatino,serif;
-	background-color: whitesmoke;
+	background-color: sliver;
 	background-position: center -5em;
-	#background-repeat: repeat-x; 
+    background-repeat: repeat-x; 
 }
 
 /* Hack via Joel Spolsky to make image rescaling nicer in IE */
@@ -92,7 +92,7 @@ hr {
 sup { line-height: 1ex; }
 
 #site {
-	max-width: 65em;
+	max-width: 60em;
 	margin: 0.1em auto 3em auto;
 	line-height: 1.2em;
 }
@@ -120,19 +120,20 @@ sup { line-height: 1ex; }
 }
 
 #page, #disqus_thread {
-	background: white;
+/*	background: white; */
 /*	background-image: url(grid.png); */
-	padding: 0.5em 4em 2em 4em;
-	border: 1px solid #ccc;
+	padding: 0.5em 0.5em 2em 0.5em;
+/*	border: 1px solid #ccc; */
     margin-top: 0.8em;
 }
 
 /* More experimental CSS3 features */
-#page, #disqus_thread {
-	box-shadow: 2px 2px 8px #aaa;
+/* #page, #disqus_thread {
+	box-shadow: 2px 2px 8px #aaa; 
 	-webkit-box-shadow: 2px 2px 8px #aaa;
 	-moz-box-shadow: 2px 2px 8px #aaa;	
 }
+*/
 
 #disqus_thread { padding-top: 0; }
 
@@ -276,14 +277,14 @@ ul.compact li a {
 #header {
 	position: relative;
 	line-height: 1.5em;
-
 	margin-bottom: 0;
-    font-size: 1.2em;
+    border: 1px solid #F2F2F2;
+    background-color: #F2F2F2;
 }
 
 #header h1 {
     font-family: "Hiragino Sans GB","Microsoft YaHei",Trebuchet,"Trebuchet MS",Tahoma,"Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif,"Helvetica","Microsoft YaHei";
-    font-size: 1.2em;
+    font-size: 150%;
     line-height: 120%;
     font-weight: bold;
 	display: block;
@@ -303,7 +304,7 @@ ul.compact li a {
     display: inline; 
 }
 #header ul li a {
-    font-size: 1.1em;
+    font-size: 120%;
     line-height: 200%;
 	padding: 0.3em;
 	display: inline;
@@ -317,7 +318,7 @@ ul.compact li a {
 
 #header .byline {
 	color: silver;
-	font-size: 0.9em;
+	font-size: 100%;
 	line-height: 75%
 }
 #header:hover .byline a { color: silver; text-shadow: none; }
@@ -366,7 +367,7 @@ body#Kith #header a.kith
 }
 .section h1 {
 	font-family: Galdeano,Trebuchet,"Trebuchet MS",Tahoma,Verdana,sans-serif,Palatino,georgia, serif;
-	font-size: 1.3em;
+	font-size: 110%;
 	line-height: 1.43em;
 	position: absolute;
 	width: 6em;
@@ -547,7 +548,7 @@ p.delicious-extended:before { content: ' — '; }
 #footer {
 	margin-top: 0;
 	color: grey;
-	font-size: 80%;
+	font-size: 120%;
 	line-height: 1.3em;
     font-size: 0.7em;
 }
@@ -559,9 +560,13 @@ p.delicious-extended:before { content: ' — '; }
 #footer a {
 	font-variant: small-caps;
 	font-style: normal;
-    font-size: 0.7em;
+    font-size: 120%;
 	color: #77d;
 	text-decoration: none;
+}
+
+#footer p{
+    font-size:120%;
 }
 #footer .copyright {
 	position: absolute;
