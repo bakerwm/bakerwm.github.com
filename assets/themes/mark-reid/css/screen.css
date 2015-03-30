@@ -113,10 +113,15 @@ sup { line-height: 1ex; }
 }
 
 #page p {
-    font-size: 0.9em;
+    font-size: 1.1em;
     font-weight: normal;
-    line-height: 120%;
+    line-height: 150%;
     padding: 0.3em 0 0.3em 0;
+}
+
+#page figure {
+    font-size: 1em;
+    line-height: 150%;
 }
 
 #page, #disqus_thread {

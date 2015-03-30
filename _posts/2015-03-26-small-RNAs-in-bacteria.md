@@ -1,9 +1,10 @@
 ---
 layout: post
-title: "Synthetic RNA silencing in bacteria"
+title: "EOB-001: Synthetic RNA silencing in bacteria"
 categories:
-- small RNA
+- Eyes on biology
 tags:
+- EOB
 - regulatory RNA
 - bacteria
 
