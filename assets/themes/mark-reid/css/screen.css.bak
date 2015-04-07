@@ -1,6 +1,18 @@
+/* @override http://mark.reid.dev/files/css/screen.css */
+
+/* @override 
+	http://mark.reid.dev/files/css/screen.css
+	http://mark.reid.name/files/css/screen.css
+*/
+
 /* screen.css
+ *
+ * A clean, simple stylesheet that aims for
+ * a consistent vertical rhythm.
+ *
  * Base font height: 16px
  * Base line length: 24px
+ * 
  * AUTHOR: Mark Reid <mark@reid.name>
  */
 
@@ -9,10 +21,10 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,p,blockquote,th,t
 /* @end */
 
 body {
-	font-family: "Helvetica",Palatino, georgia, "times new roman",sans-serif,Palatino;
-	background-color: white;
+	font-family: "Hiragino Sans GB","Microsoft YaHei",Trebuchet,"Trebuchet MS",Tahoma,"Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif,"Helvetica","Microsoft YaHei",sans-serif,Palatino,serif;
+	background-color: sliver;
 	background-position: center -5em;
-	background-repeat: repeat-x; 
+    background-repeat: repeat-x; 
 }
 
 /* Hack via Joel Spolsky to make image rescaling nicer in IE */
@@ -20,40 +32,54 @@ img { -ms-interpolation-mode:bicubic; }
 
 /* IE6 ignores this and uses default size of 16pt */
 html>body { font-size:13px; }
-p { margin: 0 0 1.5em 0; text-align: justify; }
+p { 
+    margin: 0 0 1.5em 0; 
+    text-align: justify; 
+}
 
 a { text-decoration: none; color: #339; }
-a:hover { text-decoration: underline; color: #33f; }
+a: { text-decoration: underline; color: #33f; }
 a.pdf:before { 
 	margin-right: 1em;
-	content: url(/files/css/icon_pdf.gif); }
+	content: url(/files/css/icon_pdf.gif); 
+}
 
 h1,h2,h3,h4 { 
-	font-size: 1.5em; 
-	font-weight: normal; 
-	line-height: 120%; 
-    clear: left; 	
-	font-family: "Helvetica",'lucida grande', sans-serif; 
-}
-h1 { margin-bottom: 1em; }
-h1 img {
-	width: 120px;
-	border: 1px solid silver; 
-	padding: 2px;
-	margin: 0em 1em 0.8em 1em;
-	float: right; clear: left;
-}
-h2 {
-	font-size: 100%;
-	line-height: 120%;
-	margin: 1.5em 0 1.5em 0;
 	font-weight: bold;
+    line-height: 120%;
+	clear: left; 	
+	font-family: "Hiragino Sans GB","Microsoft YaHei",Trebuchet,"Trebuchet MS",Tahoma,"Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif,"Helvetica",'lucida grande', sans-serif; 
 }
-h3 { font-size: 100%;
-	line-height: 120%;
-	margin: 1.5em 0 .5em 0;
+
+h1 { 
+	line-height: 1.6em;
+	margin: 0.5em 0 0.5em 0;
 	font-weight: bold;
-	font-variant: small-caps;
+    color: #151515;
+}
+/*
+h1 ol{
+    font-size: 1.2em;
+    line-height: 120%;
+    margin: 0.5em 0 0.5em 0;
+    font-weight: bold;
+    color: #151515;
+}
+
+h2 ol {
+	font-size: 1.2em;
+	line-height: 120%;
+	margin: 0.5em 0 0.5em 0;
+	font-weight: bold;
+    color: #151515;
+}
+*/
+h3,h4,h5 {
+   	font-size: 1.2em;
+	line-height: 2em;
+	margin: 0.7em 0 0.7em 0;
+	font-weight: bold;
+    color: #151515;
 }
 
 hr { 
@@ -68,11 +94,38 @@ sup { line-height: 1ex; }
 #site {
 	max-width: 60em;
 	margin: 0.1em auto 3em auto;
-	line-height: 150%;
+	line-height: 1.2em;
+}
+
+#page h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 120%;
+    margin: 0.5em 0 0.5em 0;
+    padding-bottom: 0.5em;
+}
+
+#page h2,h3,h4,h5 {
+    font-size: 1.1em;
+    font-weight: bold;
+    line-height: 120%;
+    padding: 0.5em 0 0.5em 0;
+}
+
+#page p {
+    font-size: 1.1em;
+    font-weight: normal;
+    line-height: 150%;
+    padding: 0.3em 0 0.3em 0;
+}
+
+#page figure {
+    font-size: 1em;
+    line-height: 150%;
 }
 
 #page, #disqus_thread {
-	background: white;
+/*	background: white; */
 /*	background-image: url(grid.png); */
 	padding: 0.5em 0.5em 2em 0.5em;
 /*	border: 1px solid #ccc; */
@@ -80,16 +133,12 @@ sup { line-height: 1ex; }
 }
 
 /* More experimental CSS3 features */
-#page, #disqus_thread {
-	-webkit-hyphens: auto;
-	-moz-hyphens: auto;
-	hyphens: auto;
-
-/*	box-shadow: 2px 2px 8px #aaa;
+/* #page, #disqus_thread {
+	box-shadow: 2px 2px 8px #aaa; 
 	-webkit-box-shadow: 2px 2px 8px #aaa;
 	-moz-box-shadow: 2px 2px 8px #aaa;	
-*/
 }
+*/
 
 #disqus_thread { padding-top: 0; }
 
@@ -118,17 +167,17 @@ sup { line-height: 1ex; }
     margin: 5px 5px 5px 5px;
 }
 
-/*
-.emphnext + p:first-letter, p.emphfirst:first-letter {
-	font-size: 3em;
-	padding: 0 0.1ex 0 0;
-	margin:  0.2ex 0 -0.2ex 0;
-	line-height: 1em;
+/*.emphnext + p:first-letter, p.emphfirst:first-letter {
+	font-size: 30px;
+	padding: 0 -1px 0 0;
+	margin:  0 0 6px 0;
+	line-height: 20px;
 	float: left;
-} */
+}*/
 
 .emphnext + p:first-line, p.emphfirst:first-line {
-	font-variant: small-caps;
+	#font-variant: small-caps;
+	font-size: larger;
 }
 /* @end */
 
@@ -137,7 +186,7 @@ sup { line-height: 1ex; }
 .inset { 
 	border: 1px solid silver; 
 	padding: 2px;
-	margin: 0em 1em 0.8em 1em;
+	margin: 0em 0.8em 0.8em 0.8em;
 }
 .right.inset { margin-right: 0 !important; }
 .left.inset { margin-left: 0 !important; }
@@ -149,43 +198,38 @@ sup { line-height: 1ex; }
 blockquote {
 	padding: 0.2em 1.5em 0.2em 1.5em;
 	margin-left: 1.2em;
+    margin-bottom: 0;
+
 	color: 848484;
 	font-size: 1em;
 	line-height: 120%;
     border-left: 2px solid #D8D8D8;
 }
-li p {
-	 margin-bottom: 0;
-	 margin-top:  0;
+
+.note {
+	padding-top: 0.5em; 
+	background-color: #fafaff;
+	border-top: 1px solid silver;
+	border-bottom: 1px solid silver;
 }
-
-
 /* @group Table */
-table {
+table.neat {
+	width: 80%;
 	margin: 1.5em auto 1.5em auto;
 	table-layout: fixed;
 	border-spacing: 0;
 }
-table th { text-align: center; font-weight: bold; background-color: #eeeeee; }
-table td { background-color: white; padding: 0 1em; }
-table th.title { border-bottom: 1px solid gray; border-top: 1px solid gray; vertical-align: bottom; 
-background-color: lightgrey; }
-table tr.end td { border-bottom: 1px solid #eeeeee; }
-
-.figure { border: 1px solid #eee; margin-bottom: 1em; padding: 1em 1em 0 1em; }
-.figure img { width: 95%; margin: 1em auto 0 auto; } 
-.figure p, dl.figure dt, caption { 
+table.neat tr { text-align: center; }
+table.neat th { font-weight: normal; background-color: #eeeeee; }
+table.neat td { background-color: white; }
+table.neat th.title { border-bottom: 1px solid gray; border-top: 1px solid gray; vertical-align: bottom; background-color: lightgrey; }
+caption { 
 	color: #333;
 	font-size: 0.875em;
+	margin: 0.875em auto 0 auto;
 	line-height: 1.14em;
-	text-align: center;
+	text-align: justify;
 }
-.nostretch .figure img { width: auto !important; }
-
-.figure p, dl.figure dt { margin: 0.875em auto 0 auto; }
-caption { margin: 0 auto 0.875em  auto; }
-
-table.data tr { text-align: center; }
 
 /* @end */
 
@@ -223,33 +267,32 @@ ul.compact li a {
 /* @end */
 
 /* @group Header */
-#header, #header a { color: #F2F2F2; border-bottom: none; }
-#header .hover { color: transparent; }
+#header, #header a {
+    color: #585858;
+    border-bottom: none;
+}
+/*#header .hover { color: transparent; } */
 #header:hover a { 
+    color: black;
     border-bottom: none;
     text-decoration: none;
 }
-/*    color: black; text-shadow: #aaa 2px 2px 3px;} */
-
-#header:hover a:hover { text-decoration: none; }
-#header a:hover .hover { color: #F2F2F2; border-bottom: none; }
+/*#header:hover a:hover { text-decoration: none; }*/
+#header a:hover .hover { color: #2E2E2E; border-bottom: none; }
 #header {
-    font-family: "Helvetica",Palatino, georgia, "times new roman", serif;
 	position: relative;
-	font-variant: small-caps;
-	line-height: 200%;
-	margin-bottom: 0.5em;
-    padding-left: 0.5em;
-    border: 1px solid #F2F2F2;
-    background-color: #585858;
-}
-#header h1 {
-	font-family: "Helvetica",Palatino, georgia, "times new roman", serif;
+	line-height: 1.5em;
 	margin-bottom: 0;
-    font-size: 120%;
-	line-height: 180%;
+    border: 1px solid #F2F2F2;
+    background-color: #F2F2F2;
+}
+
+#header h1 {
+    font-family: "Hiragino Sans GB","Microsoft YaHei",Trebuchet,"Trebuchet MS",Tahoma,"Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif,"Helvetica","Microsoft YaHei";
+    font-size: 150%;
+    line-height: 120%;
+    font-weight: bold;
 	display: block;
-	font-weight: bold;
 }
 
 #header ul {
@@ -257,25 +300,27 @@ ul.compact li a {
 	top: 0;
 	right: 0;
 	font-size: 100%;
-	line-height: 120%;
 	display: block;
 	margin: 0;
 	width: 80%;
 	text-align: right;
 }
-#header ul li { display: inline; }
+#header ul li { 
+    display: inline; 
+}
 #header ul li a {
-    font-size: 100%;
+    font-size: 120%;
     line-height: 200%;
 	padding: 0.3em;
 	display: inline;
 }
+
 #header ul li a:hover {
 	color: #1C1C1C;
-    background-color: #F2F2F2;
+    background-color: #A4A4A4;
     line-height: 120%;
-	border-bottom: none;
 }
+
 #header .byline {
 	color: silver;
 	font-size: 100%;
@@ -284,18 +329,24 @@ ul.compact li a {
 #header:hover .byline a { color: silver; text-shadow: none; }
 #header:hover .byline a:hover { color: black;}
 
-body#Work #header a.work,
-body#Vita #header a.work,
+/* @group Twitter */
+#twitter_update_list { display: inline; margin: 0; }
+#twitter_update_list li { display: inline; margin: 0;}
+.twitter-title { display: inline; margin: 0; }
+.twitter-title a { display: inline; }
+/* @end */
+
+body#Work #header a.work, 
 body#Home #header a.home, 
 body#Play #header a.play,
 body#Info #header a.info,
-body#Blog #header a.blog,
 body#Code #header a.code,
 body#Past #header a.past,
 body#Kith #header a.kith
 { 
 	border-bottom: 2px solid silver; 
 }
+
 /* @end */
 
 /* @group Footnotes */
@@ -310,28 +361,94 @@ body#Kith #header a.kith
 .footnotes ol li > a { display: none; }
 /* @end */
 
+/* @group Sections */
+.section { 
+	font-size: 87.5%; 
+	line-height: 1.43em; 
+	margin-bottom: 1.43em;
+	margin-top: 1.43em;
+	margin-left: 7.5em;
+	padding-right: 3em;
+}
+.section h1 {
+	font-family: Galdeano,Trebuchet,"Trebuchet MS",Tahoma,Verdana,sans-serif,Palatino,georgia, serif;
+	font-size: 110%;
+	line-height: 1.43em;
+	position: absolute;
+	width: 6em;
+	max-width: 6em;
+	margin-left: -7.5em;
+	font-weight: bold;
+	font-variant: small-caps;
+}
+.section p { margin-bottom: 1.43em; }
+
+/* @end */
+
+.list .title { font-weight: bold; }
+p.line { position: relative; margin: 0; }
+p.excerpt { margin: 0; }
+.comments { font-size: smaller; position: absolute; color: silver; right: 0; top: 0; }
+.excerpt { color: black; }
+
+/* @group Signature */
+.signature { 
+	margin-top: 3em; 
+	position: relative;
+}
+.signature .author { 
+	font-variant: small-caps; 
+	font-style: normal; 
+	color: black;
+	display: block;
+	margin-bottom: 1.5em;
+}
+.signature .date { 
+	font-size: 87.5%;
+	line-height: 1.5em;
+	display: block; 
+	font-variant: small-caps; 
+	font-style: normal; 
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.signature .location { 
+	display: block; 
+	font-size: 87.5%;
+	line-height: 1.5em;
+	position: absolute;
+	right: 0;
+	top: 1.5em;
+}
+/* @end */
+
 /* @group Code */
 pre {
 	margin: 1em 0 1.5em 0;
-	font-size: 110%; /* Hack to make code look same size as body font */  
-	line-height: 140%;	
+	font-size: 0.9em; /* Hack to make code look same size as body font */  
+	line-height: 1.2em;	
 	color: #111;
 	background: #F2F2F2;
 	border: 1px solid #ddc;
 	padding: 0.5em 1em;
-    overflow: auto;
+	overflow: hidden;
+
+	/* Experimental CSS3 stuff 
+	box-shadow: 1px 1px 6px #ccc;
+	-webkit-box-shadow: 1px 1px 6px #ccc;
+	-moz-box-shadow: 1px 1px 6px #ccc;
+    */
 }
 pre:hover {
 	border-right: none;
 	overflow: visible;
 }
-code {    
-	font-size: 1em;
+code {
+    font-family: "Courier New",monospace,Monaco,Menlo;
+	font-size: 0.9em;
 	background-color: #F2F2F2;
-	line-height: 140%;
-    height: 100px;
-    resize: vertical;
-    overflow: auto;
+	line-height: 120%;
 }
 pre > code {
 	background-color: transparent;
@@ -409,18 +526,36 @@ div.LTprovided { display: none; }
 #lastfm a { margin-right: 0.7em; }
 /* @end */
 
-/* @group Twttier */
-#tweet { margin: 0;}
-div#tweet ul { margin-left: 0; padding-left: 0 }
-#tweet ul li { margin-left: 0; list-style: none; }
+/* @group Delicious */
+.delicious-posts { 
+
+}
+.delicious-posts ul, .delicious-posts li, .delicious-banner { 
+    margin: 10px 20px 10px 20px;
+}
+.delicious-posts li { 
+    list-style-position: outside; 
+    margin-bottom: 0.8em; 
+    margin-left: 0.8em; 
+    text-align: justify; 
+}
+
+.delicious-post { }
+.delicious-banner { display: none; }
+.delicious-posts a:hover { }
+.delicious-posts a { }
+.delicious-post a { font-weight: bold; }
+p.delicious-extended { font-size: 100%; display: inline; }
+p.delicious-extended:before { content: ' — '; }
 /* @end */
 
 /* @group Footer */
 #footer {
 	margin-top: 0;
 	color: grey;
-	font-size: 87.5%;
+	font-size: 120%;
 	line-height: 1.3em;
+    font-size: 0.7em;
 }
 #footer address {
 	position: relative;
@@ -430,8 +565,13 @@ div#tweet ul { margin-left: 0; padding-left: 0 }
 #footer a {
 	font-variant: small-caps;
 	font-style: normal;
+    font-size: 120%;
 	color: #77d;
 	text-decoration: none;
+}
+
+#footer p{
+    font-size:120%;
 }
 #footer .copyright {
 	position: absolute;
@@ -447,11 +587,40 @@ div#tweet ul { margin-left: 0; padding-left: 0 }
 }
 /* @end */
 
+
+/* @group Figures and images */
+dl.figure {
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+	text-align: center;
+}
+
+dl.figure dd {
+	color: #333;
+	font-size: 0.875em;
+	margin: 0.875em auto 0 auto;
+	line-height: 1.14em;
+	text-align: justify;
+	width: 85%;
+}
+/* @end */
+
 /* @group Equations */
 div.maruku-equation { display: block ;text-align: center; }
 div.maruku-equation img.maruku-png { position: relative; top: -0.75em;}
 span.maruku-inline { }
 img.maruku-png { }
+/* @end */
+
+/* .prev-next */
+.prev-next {
+	position:relative;
+    color: #585858;
+}
+.prev-next .next{ 
+	float:right;
+    color: #585858;
+}	
 
 /* tag_box ======================================================== */
 .tag_box {
@@ -489,5 +658,4 @@ img.maruku-png { }
 	border:1px solid #4C964D;
 	color:#FFF;
 }
-
-/* @end */
+hover

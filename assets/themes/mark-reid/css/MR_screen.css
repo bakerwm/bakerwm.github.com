@@ -9,8 +9,8 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,p,blockquote,th,t
 /* @end */
 
 body {
-	font-family: "Helvetica",Palatino, georgia, "times new roman",sans-serif,Palatino;
-	background-color: white;
+	font-family: Palatino, georgia, "times new roman",sans-serif,Palatino;
+	background-color: silver;
 	background-position: center -5em;
 	background-repeat: repeat-x; 
 }
@@ -68,7 +68,7 @@ sup { line-height: 1ex; }
 #site {
 	max-width: 60em;
 	margin: 0.1em auto 3em auto;
-	line-height: 150%;
+	line-height: 120%;
 }
 
 #page, #disqus_thread {
@@ -85,10 +85,9 @@ sup { line-height: 1ex; }
 	-moz-hyphens: auto;
 	hyphens: auto;
 
-/*	box-shadow: 2px 2px 8px #aaa;
+	box-shadow: 2px 2px 8px #aaa;
 	-webkit-box-shadow: 2px 2px 8px #aaa;
 	-moz-box-shadow: 2px 2px 8px #aaa;	
-*/
 }
 
 #disqus_thread { padding-top: 0; }
@@ -158,8 +157,6 @@ li p {
 	 margin-bottom: 0;
 	 margin-top:  0;
 }
-
-
 /* @group Table */
 table {
 	margin: 1.5em auto 1.5em auto;
@@ -223,31 +220,30 @@ ul.compact li a {
 /* @end */
 
 /* @group Header */
-#header, #header a { color: #F2F2F2; border-bottom: none; }
+#header, #header a { color: #585858; border-bottom: none; }
 #header .hover { color: transparent; }
 #header:hover a { 
+    color: black;
     border-bottom: none;
     text-decoration: none;
 }
 /*    color: black; text-shadow: #aaa 2px 2px 3px;} */
 
 #header:hover a:hover { text-decoration: none; }
-#header a:hover .hover { color: #F2F2F2; border-bottom: none; }
+#header a:hover .hover { color: #2E2E2E; border-bottom: none; }
 #header {
-    font-family: "Helvetica",Palatino, georgia, "times new roman", serif;
 	position: relative;
 	font-variant: small-caps;
-	line-height: 200%;
-	margin-bottom: 0.5em;
-    padding-left: 0.5em;
+	line-height: 140%;
+	margin-bottom: 0;
     border: 1px solid #F2F2F2;
-    background-color: #585858;
+    background-color: #F2F2F2;
 }
 #header h1 {
 	font-family: "Helvetica",Palatino, georgia, "times new roman", serif;
 	margin-bottom: 0;
-    font-size: 120%;
-	line-height: 180%;
+    font-size: 150%;
+	line-height: 120%;
 	display: block;
 	font-weight: bold;
 }
@@ -265,16 +261,16 @@ ul.compact li a {
 }
 #header ul li { display: inline; }
 #header ul li a {
-    font-size: 100%;
+    font-size: 120%;
     line-height: 200%;
 	padding: 0.3em;
 	display: inline;
 }
 #header ul li a:hover {
 	color: #1C1C1C;
-    background-color: #F2F2F2;
+    background-color: #A4A4A4;
     line-height: 120%;
-	border-bottom: none;
+	border-bottom: 2px solid blue;
 }
 #header .byline {
 	color: silver;
@@ -283,6 +279,13 @@ ul.compact li a {
 }
 #header:hover .byline a { color: silver; text-shadow: none; }
 #header:hover .byline a:hover { color: black;}
+
+/* @group Twitter */
+#twitter_update_list { display: inline; margin: 0; }
+#twitter_update_list li { display: inline; margin: 0;}
+.twitter-title { display: inline; margin: 0; }
+.twitter-title a { display: inline; }
+/* @end */
 
 body#Work #header a.work,
 body#Vita #header a.work,
@@ -296,6 +299,11 @@ body#Kith #header a.kith
 { 
 	border-bottom: 2px solid silver; 
 }
+
+/* @end */
+
+/* @group News */
+p.news .date { font-weight: bold; }
 /* @end */
 
 /* @group Footnotes */
@@ -310,28 +318,102 @@ body#Kith #header a.kith
 .footnotes ol li > a { display: none; }
 /* @end */
 
+/* @group Sections */
+.section { 
+	font-size: 87.5%; 
+	line-height: 1.43em; 
+	margin-bottom: 1.43em;
+	margin-top: 1.43em;
+	margin-left: 8em;
+	padding-right: 3em;
+}
+.section h1, .section h2, .section h3 {
+	font-family: Palatino, georgia, serif;
+	font-size: 110%;
+	line-height: 1.43em;
+	position: absolute;
+	width: 8em;
+	max-width: 8em;
+	margin-left: -8em;	
+	margin-top: 0;
+}
+.section h1 { font-weight: bold; font-variant: small-caps; }
+.section h2 { text-align: left; }
+.section h3 { 
+	text-align: left; 
+	color: gray; 
+	font-variant: small-caps; 
+}
+.section p { margin-bottom: 1.43em; }
+
+.extra {
+	margin-top: 0;
+	color: grey;
+}
+/* @end */
+
+.list .title { font-weight: bold; }
+p.line { position: relative; margin: 0; }
+p.excerpt { margin: 0; }
+.comments { font-size: smaller; position: absolute; color: silver; right: 0; top: 0; }
+.excerpt { color: black; }
+
+/* @group Signature */
+.signature { 
+	margin-top: 3em; 
+	position: relative;
+}
+.signature .author { 
+	font-variant: small-caps; 
+	font-style: normal; 
+	color: black;
+	display: block;
+	margin-bottom: 1.5em;
+}
+.signature .date { 
+	font-size: 87.5%;
+	line-height: 1.5em;
+	display: block; 
+	font-variant: small-caps; 
+	font-style: normal; 
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.signature .location { 
+	display: block; 
+	font-size: 87.5%;
+	line-height: 1.5em;
+	position: absolute;
+	right: 0;
+	top: 1.5em;
+}
+/* @end */
+
 /* @group Code */
 pre {
 	margin: 1em 0 1.5em 0;
 	font-size: 110%; /* Hack to make code look same size as body font */  
 	line-height: 140%;	
 	color: #111;
-	background: #F2F2F2;
+	background: #fffff0;
 	border: 1px solid #ddc;
 	padding: 0.5em 1em;
-    overflow: auto;
+	overflow: hidden;
+
+	/* Experimental CSS3 stuff */
+	box-shadow: 1px 1px 6px #ccc;
+	-webkit-box-shadow: 1px 1px 6px #ccc;
+	-moz-box-shadow: 1px 1px 6px #ccc;
 }
 pre:hover {
 	border-right: none;
 	overflow: visible;
 }
-code {    
+code {
 	font-size: 1em;
-	background-color: #F2F2F2;
+	background-color: #f7f7ff;
 	line-height: 140%;
-    height: 100px;
-    resize: vertical;
-    overflow: auto;
 }
 pre > code {
 	background-color: transparent;
@@ -415,6 +497,19 @@ div#tweet ul { margin-left: 0; padding-left: 0 }
 #tweet ul li { margin-left: 0; list-style: none; }
 /* @end */
 
+/* @group Delicious */
+.delicious-posts { }
+.delicious-posts ul, .delicious-posts li, .delicious-banner { margin: 0; padding: 0 }
+.delicious-posts li { list-style-position: outside; margin-bottom: 1em; margin-left: 1em; text-align: justify; }
+.delicious-post { }
+.delicious-banner { display: none; }
+.delicious-posts a:hover { }
+.delicious-posts a { }
+.delicious-post a { font-weight: bold; }
+p.delicious-extended { font-size: 100%; display: inline; }
+p.delicious-extended:before { content: ' — '; }
+/* @end */
+
 /* @group Footer */
 #footer {
 	margin-top: 0;
@@ -447,47 +542,64 @@ div#tweet ul { margin-left: 0; padding-left: 0 }
 }
 /* @end */
 
+/* @group Vita */
+#Vita blockquote { 
+	margin-top: 0; 
+	margin-left: 0.5ex;
+	padding-left: 1em;
+	border-left: 1px solid #ddd;
+	line-height: 1.5em; 
+}
+#Vita .section ul { margin-bottom: 0; }
+#Vita .highlight { 
+	background: #eef;
+	margin-left: -1em;
+	padding: 0 1em;
+	border-left: 2px solid #ccf;
+}
+#Vita li p { margin-bottom: 0; }
+#Vita dl {}
+#Vita dt { 
+	font-family: Palatino, georgia, serif;
+	font-size: 100%;
+	line-height: 1.43em;
+	position: absolute;
+	width: 8em;
+	max-width: 8em;
+	margin-left: -8em;	
+	margin-top: 0;
+	text-align: left; 
+	color: gray; 
+	-webkit-hyphens: none !important;
+	hyphens: none !important;
+	font-variant: small-caps; 
+	font-weight: normal;
+}
+#Vita dd { margin-top: 0; }
+#Vita dd p { margin-bottom: 0; }
+#Vita .print { display: none; }
+/* @end */
+
+/* @group Figures and images
+.figure, dl.figure {
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+	text-align: center;
+}
+
+.figure p, dl.figure dd {
+	color: #333;
+	font-size: 0.875em;
+	margin: 0.875em auto 0 auto;
+	line-height: 1.14em;
+	text-align: justify;
+	width: 85%;
+}
+ @end */
+
 /* @group Equations */
 div.maruku-equation { display: block ;text-align: center; }
 div.maruku-equation img.maruku-png { position: relative; top: -0.75em;}
 span.maruku-inline { }
 img.maruku-png { }
-
-/* tag_box ======================================================== */
-.tag_box {
-	list-style:none;
-	margin-top: 5px;
-	padding:2px;
-	overflow:hidden;
-    font-size: 12px;
-}
-.tag_box li {
-	list-style:none;
-	line-height:13px;
-}
-.tag_box.inline li {
-    margin: 1px;
-    padding: 4px;
-	float:left;
-}
-.tag_box a {
-	padding: 2px 3px;
-	margin: 0;
-	background: #eee;
-	border-radius: 3px;
-	border:1px dashed #ccc;
-	text-decoration:none;
-    color: #DF0101;
-    font-size: 11px;
-}
-.tag_box a span{
-	vertical-align:super;
-	font-size:8px;
-}
-.tag_box a.active {
-	background:#57A957;
-	border:1px solid #4C964D;
-	color:#FFF;
-}
-
 /* @end */
