@@ -35,7 +35,7 @@ h1,h2,h3,h4 {
     clear: left; 	
 	font-family: "Helvetica",'lucida grande', sans-serif; 
 }
-h1 { margin-bottom: 1em; }
+h1 { margin-bottom: 1.5em; }
 h1 img {
 	width: 120px;
 	border: 1px solid silver; 
@@ -44,12 +44,12 @@ h1 img {
 	float: right; clear: left;
 }
 h2 {
-	font-size: 100%;
+	font-size: 120%;
 	line-height: 120%;
 	margin: 1.5em 0 1.5em 0;
 	font-weight: bold;
 }
-h3 { font-size: 100%;
+h3 { font-size: 120%;
 	line-height: 120%;
 	margin: 1.5em 0 .5em 0;
 	font-weight: bold;
@@ -150,7 +150,7 @@ blockquote {
 	padding: 0.2em 1.5em 0.2em 1.5em;
 	margin-left: 1.2em;
 	color: 848484;
-	font-size: 1em;
+	font-size: 1.1em;
 	line-height: 120%;
     border-left: 2px solid #D8D8D8;
 }
@@ -268,6 +268,7 @@ ul.compact li a {
     font-size: 100%;
     line-height: 200%;
 	padding: 0.3em;
+    padding-right: 0.5em;
 	display: inline;
 }
 #header ul li a:hover {
@@ -314,7 +315,7 @@ body#Kith #header a.kith
 pre {
 	margin: 1em 0 1.5em 0;
 	font-size: 110%; /* Hack to make code look same size as body font */  
-	line-height: 140%;	
+	line-height: 130%;	
 	color: #111;
 	background: #F2F2F2;
 	border: 1px solid #ddc;
@@ -323,9 +324,10 @@ pre {
 }
 pre:hover {
 	border-right: none;
-	overflow: visible;
+	overflow: auto;
 }
-code {    
+code {
+    font-family: "Consolas","Helvetica",'lucida grande';
 	font-size: 1em;
 	background-color: #F2F2F2;
 	line-height: 140%;
