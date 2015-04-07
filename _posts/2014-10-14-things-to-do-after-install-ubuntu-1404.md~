@@ -48,6 +48,26 @@ sudo update-pepperflashplugin-nonfree --install
 
 * 2 软件中心搜索adobe flash player安装即可
 
+## 5. 安装Bioinfo-tools    
+* 1 R 3.1.1 for ubuntu 14.04
+
+```
+sudo add-apt-repository ppa:marutter/rrutter
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install r-base r-base-dev
+```
+
+* 2 Rstudio for ubuntu 14.04    
+前往 http://www.rstudio.com/products/rstudio/download/ 下载相应版本的 deb 包，双击安装。
+
+* 3 Bioconductor
+
+```R
+source("http://bioconductor.org/biocLite.R")
+biocLite()
+```
+
 ## 6. 安装Jekyll & git 管理github上的blog    
 Jekyll 2 was recently released and can be installed on Ubuntu 14.04 using `apt-get` and `gem install`. Additional features such as Rdiscount can be added with the same meth od. Although there are packages for Jekyll in the Ubuntu repository, the packages are for older versions of Jekyll.
 See the reference:[Install Jekyll 2 on Ubuntu 14.04](http://michaelchelen.net/81fa/install-jekyll-2-ubuntu-14-04/)    
@@ -103,7 +123,7 @@ Start the website website HTML and start a local server.
 jekyll serve
 ```
 
-# 7. 安装Bioinfo-tools
+# 6. 安装Bioinfo-tools
 * 1 R 3.1.1 for ubuntu 14.04    
 
 ```
@@ -171,33 +191,4 @@ python setup.py test
 a. NCBI Standalone BLAST    
 b. clustalo, libargtable,    
 c. EMBOSS,     
-
-* 6 Install samtools
-* 7 install bedtools  
-
-  `sudo apt-get install bedtools`
-
-* 8 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
