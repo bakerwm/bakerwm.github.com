@@ -10,8 +10,9 @@ tags: [RNA decay, silencing]
 
 # Suppression of endogenous gene silencing by bidirectional cytoplasmic RNA decay in Arabidopsis
 
-> Xinyan Zhang1, Ying Zhu1, Xiaodan Liu1, Xinyu Hong1, Yang Xu2, Ping Zhu2, Yang Shen3, Huihui Wu1, Yusi Ji1, Xing Wen1, Chen Zhang1, Qiong Zhao1, Yichuan Wang1, Jian Lu1,3, Hongwei Guo1,3,*
-> Author Affiliations
+> Xinyan Zhang1, Ying Zhu1, Xiaodan Liu1, Xinyu Hong1, Yang Xu2, Ping Zhu2, Yang Shen3, Huihui Wu1, Yusi Ji1, Xing Wen1, Chen Zhang1, Qiong Zhao1, Yichuan Wang1, Jian Lu1,3, Hongwei Guo1,3,*    
+
+**Author Affiliations**    
 
     1State Key Laboratory of Protein and Plant Gene Research, College of Life Sciences, Peking University, Beijing 100871, China.    
     2Biodynamic Optical Imaging Center, School of Life Sciences, Peking University, Beijing 100871, China.    
