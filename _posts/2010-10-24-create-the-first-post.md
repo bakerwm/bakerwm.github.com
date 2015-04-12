@@ -5,8 +5,7 @@ categories:
 - Note
 tags:
 - Note
-
-comments: true
+section: archive
 ---
 
 ## 1. Google play下载APP报错：Error RPC:S-7:AEC-7  

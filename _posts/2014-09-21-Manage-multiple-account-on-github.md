@@ -4,6 +4,8 @@ title: 管理多个Github账号
 description: "manage multiple accounts on Github"
 category: Github
 tags: [Github, account, multiple]
+section: archive
+comments: true
 ---
 
 > **Q:** How can we manage multiple [Github](github.com) IDs on one PC?

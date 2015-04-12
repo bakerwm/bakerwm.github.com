@@ -4,6 +4,7 @@ title: "SSh login without password [2 steps]"
 description: ""
 category: Linux
 tags: [SSH, rsa]
+section: archive
 ---
 {% include JB/setup %}
 

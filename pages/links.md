@@ -1,6 +1,7 @@
 ---
 title: Links
 layout: page
+section: links
 comments: yes
 ---
 {% include JB/setup %}

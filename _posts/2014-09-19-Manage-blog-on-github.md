@@ -4,7 +4,10 @@ title: 在Github上管理个人blog
 description: "Help me to manage the blog on github. step-by-step."
 category: Github
 tags: [github, blog, tutorial]
+section: archive
+comments: true
 ---
+
 This tutorial will teach you to create a blog on github step-by-step.  
 Mainly, 3 parts will included.  
 

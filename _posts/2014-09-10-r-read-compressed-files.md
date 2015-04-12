@@ -4,6 +4,8 @@ title: R语言读取压缩文档
 description: "Read *.gz, *.bz2 files in R"
 category: R
 tags: [R, gz, bz2, Read]
+section: archive
+comments: true
 ---
 使用R语言进行数据分析时，经常需要读取文档，经常会遇到压缩文档（.bz2, .gz)。
 

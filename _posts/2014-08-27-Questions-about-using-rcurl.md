@@ -4,6 +4,8 @@ title: RCurl的问题
 description: ""    
 category: R    
 tags: [R, RCurl, htmlTreeParse]    
+section: archive
+comments: true
 ---    
 
 最近学习 [炼数成金](http://www.dataguru.cn/) 的网络课程 《R七种武器之网络爬虫RCurl》，对HTML完全不懂，从头学起。    

@@ -1,7 +1,4 @@
 /* screen.css
- * Base font height: 16px
- * Base line length: 24px
- * AUTHOR: Mark Reid <mark@reid.name>
  */
 
 /* @group Reset */
@@ -9,107 +6,81 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,p,blockquote,th,t
 /* @end */
 
 body {
-	font-family: "Helvetica",Palatino, georgia, "times new roman",sans-serif,Palatino;
+	font-family: "Helvetica",Palatino, georgia,"times new roman",sans-serif,Palatino;
     background-color: white;
 	background-position: center -5em;
 }
-/* Hack via Joel Spolsky to make image rescaling nicer in IE */
-img { -ms-interpolation-mode:bicubic; }
 /* IE6 ignores this and uses default size of 1.1em */
 html>body { font-size: 1.1em; }
 p { margin: 0 0 1.5em 0; text-align: justify; }
-a { text-decoration: none; color: #339; }
-a:hover { text-decoration: underline; color: #33f; }
-a.pdf:before { 
-	margin-right: 1em;
-	content: url(/files/css/icon_pdf.gif); 
-}
+a { text-decoration: none; color: #585858; }
+a:hover { text-decoration: underline; #585858; }
 h1,h2,h3,h4 { 
-	line-height: 120%;
     font-size: 1.5em;
-	font-weight: bold; 
+	font-weight: normal; 
+	line-height: 100%;
     font-variant: normal; 
-    margin: 1.5em 0 1.5em 0;
+    margin: 1.5em 0 0.5em 0;
     clear: left; 	
 	font-family: "Helvetica",'lucida grande', sans-serif; 
 }
-h1 { font-size: 140%; }
-h2 { font-size: 130%; }
-h3 { font-size: 120%; }
-h4 { font-size: 120%; }
-h1 img {
-	width: 120px;
-	border: 1px solid silver; 
-	padding: 2px;
-	margin: 0em 1em 0.8em 1em;
-	float: right; clear: left;
-}
-hr { 
-	border-top: 1px solid silver;
-	border-bottom: none;
-	padding: 0;
-	margin: 1.46em 0 0 0;
+h1 { font-size: 130%; }
+h2,h3,h4 { 
+    font-size: 120%; 
+    margin: 0;   
 }
 sup { line-height: 1ex; }
-
 #site {
 	max-width: 60em;
-	margin: 0.1em auto 3em auto;
-	line-height: 150%;
+	margin: 0.1em auto 0 auto;
+	line-height: 120%;
 }
-
 #page, #disqus_thread {
 	background: white;
 	padding: 0.5em 0.5em 2em 0.5em;
     margin-top: 0.5em;
 }
-
 #disqus_thread { padding-top: 0; }
-
 blockquote {
-	padding: 0.2em 1.5em 0.2em 1.5em;
-	margin-left: 1.2em;
-	color: 848484;
 	font-size: 1.1em;
 	line-height: 120%;
+	padding: 0.2em 1.5em 0.2em 1.5em;
+	margin-left: 1.2em;
+	color: #848484;
     border-left: 2px solid #D8D8D8;
 }
 
 /* @group Header */
 #header, #header a { color: #F2F2F2; border-bottom: none; }
-#header a:hover .hover { color: #F2F2F2; border-bottom: none; }
+#header:hover a { text-decoration: none; }
 #header {
-    font-family: "Helvetica",Palatino, georgia, "times new roman", serif;
 	position: relative;
 	font-variant: small-caps;
-	line-height: 200%;
-	margin-bottom: 0.5em;
-    padding-left: 0.5em;
-    border: 1px solid #F2F2F2;
+    padding-left: 1em;
+    border: 1px solid white;
     background-color: #585858;
+    font-family: "Helvetica",Palatino,georgia,"times new roman",serif;
 }
-#header h1 {
-	font-family: "Helvetica",Palatino, georgia, "times new roman", serif;
-	margin-bottom: 0;
-    font-size: 1.2em;
-	line-height: 1.2em;
-	display: block;
+#header h1 a{
+    font-size: 1em;
 	font-weight: bold;
+	line-height: 0;
+	font-family: "Helvetica",Palatino, georgia, "times new roman", serif;
 }
 #header ul {
+	text-align: right;
 	position: absolute;
 	top: 0;
 	right: 0;
 	display: block;
 	margin: 0;
 	width: 80%;
-	text-align: right;
 }
 #header ul li { display: inline; }
 #header ul li a {
     font-size: 1em;
     line-height: 4em;
-	padding: 0.3em;
+	padding: 0.5em;
 	display: inline;
 }
 #header ul li a:hover {
@@ -119,19 +90,16 @@ blockquote {
 	border-bottom: none;
     text-decoration: none;
 }
-#header .byline {
-	color: silver;
-	font-size: 100%;
-	line-height: 75%
+body #home #header a.home,
+body #archive #header a.archive,
+body #categories #header a.categories,
+body #links #header a.links,
+body #about #header a.about
+ { 
+    color: #585858;
+    background-color: white;
 }
-body#Home #header a.home, 
-body#Archive #header a.archive,
-body#Catetories #header a.categories,
-body#Links #header a.links,
-body#About #header a.about
-{ 
-	border-bottom: 2px solid silver; 
-}
+
 /* @end */
 
 /* @group Code */
