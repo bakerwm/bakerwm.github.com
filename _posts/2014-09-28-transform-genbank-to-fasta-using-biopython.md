@@ -4,6 +4,8 @@ title: 使用BioPython将GenBank转换为Fasta格式
 description: 从GenBank文件中提取基因信息
 category: Biopython
 tags: [Biopython, GenBank, fasta]
+section: archive
+comments: true
 ---
 Converting GenBank files to FASTA format with Biopython
 

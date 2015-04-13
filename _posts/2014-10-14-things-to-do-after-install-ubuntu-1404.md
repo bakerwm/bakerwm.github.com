@@ -180,10 +180,31 @@ c. EMBOSS,
 * 8 
 
 
+============================
+1. Unable to access Windows partitions
 
+Error messages:
 
+```
+Unable to access “OS”
+Error mounting /dev/sda1 at /media/ming/OS: Command-line `mount -t "ntfs" -o "uhelper=udisks2,nodev,nosuid,uid=1000,gid=1000" "/dev/sda1" "/media/ming/OS"' exited with non-zero exit status 14: Windows is hibernated, refused to mount.
+Failed to mount '/dev/sda1': Operation not permitted
+The NTFS partition is in an unsafe state. Please resume and shutdown
+Windows fully (no hibernation or fast restarting), or mount the volume
+read-only with the 'ro' mount option.
+```
 
+**Solution**
 
+Run the following commands in your terminal:
+
+```
+sudo ntfsfix /dev/sd**NN**/
+```
+
+the **NN** is the partition you want to mount, (in my examples, it is sda1)
+
+[Warnnings: I do not know whether this solution will crash your windows.]
 
 
 

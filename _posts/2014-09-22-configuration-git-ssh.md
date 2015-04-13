@@ -4,6 +4,8 @@ title: 使用SSH管理Git
 description: ""
 category: Git
 tags: [SSH, Git, gitpages]
+section: archive
+comments: true
 ---
 Start Github and using Git SSH
 

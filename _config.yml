@@ -5,7 +5,7 @@ permalink: /:categories/:year/:month/:day/:title
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 
 markdown: redcarpet
-#highlighter: pygments
+highlighter: pygments
 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
@@ -72,7 +72,8 @@ JB :
   archive_path: /pages/archive.html
   categories_path : /pages/categories.html
   tags_path : /pages/tags.html
-  about_path: /pages/about.html
+  links_path : /pages/links.md
+  about_path: /pages/about.md
 #  atom_path : /pages/atom.xml
 #  rss_path : /pages/rss.xml
 

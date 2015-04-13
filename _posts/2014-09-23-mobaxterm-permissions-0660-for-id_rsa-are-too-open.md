@@ -4,6 +4,9 @@ title: "MobaXterm: Permissions 0660 for 'id_rsa' are too open"
 description: ""
 category: MobaXterm 
 tags: [MobaXterm, Windows]
+section: archive
+comments: true
+
 ---
 # Environment:  
 * MS Windows 8.1  

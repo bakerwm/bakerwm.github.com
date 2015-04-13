@@ -1,11 +1,12 @@
 ---
 title: About Me
 layout: page
+section : about
 comments: yes
 ---
 {% include JB/setup %}
 
-<p><img href="" src="{{ base.url }}/assets/images/Aboutme.jpg" alt="@Dalian" align="middle" width=100% /> </p>
+![]({{ base.url }}/assets/images/Aboutme.jpg)
 
 ## Write  **[M.]**    
 

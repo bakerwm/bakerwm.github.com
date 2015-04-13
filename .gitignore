@@ -1,6 +1,10 @@
 _site/*
+<<<<<<< HEAD
 _theme_packages/*
 *~
+=======
+_draft/*
+>>>>>>> 1a5a7c868f0da8b644c8af62cb40e35a1b8ac1b2
 
 Thumbs.db
 .DS_Store

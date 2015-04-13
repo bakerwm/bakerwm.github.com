@@ -4,6 +4,8 @@ title: 创建Github blogs
 description: "About Github pages"
 category: Github
 tags: [Github, pages, blog]
+section: archive
+comments: true
 ---
 
 > **Q:** Can we publish blogs using Github?  
