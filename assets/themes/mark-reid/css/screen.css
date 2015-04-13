@@ -36,15 +36,15 @@ p { margin: 0 0 1.5em 0; text-align: justify; }
 a { text-decoration: none; color: #585858; }
 a:hover { text-decoration: underline; #585858; }
 h1,h2,h3,h4 { 
-    font-size: 13px;
-	font-weight: normal; 
+    font-size: 14px;
+	font-weight: bold; 
 	line-height: 20px;
     font-variant: normal; 
     margin: 0.5em 0 0.5em 0;
     clear: left; 	
 	font-family: "Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif; 
 }
-h1 { font-size: 13px; }
+h1 { font-size: 14px; }
 h2,h3,h4 { 
     font-size: 14px; 
     margin: 0;   
@@ -124,7 +124,7 @@ body #about #header a.about
 
 /* @group Code */
 code,pre {
-font-family:Monaco,Menlo,"Courier New",monospace;
+font-family: Consolas,Monaco,Menlo,"Courier New",monospace;
 font-size:13px;
 color:#111;
 -webkit-border-radius:3px;

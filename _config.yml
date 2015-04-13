@@ -70,7 +70,7 @@ JB :
   # Some JB helpers refer to these paths; change them here if needed.
   #
   archive_path: /pages/archive.html
-  categories_path : /pages/categories.md
+  categories_path : /pages/categories.html
   tags_path : /pages/tags.html
   links_path : /pages/links.md
   about_path: /pages/about.md
