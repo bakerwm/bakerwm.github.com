@@ -14,10 +14,10 @@ Figure. RNA-Seq analysis for bacteria.
 
 =====================================
 
-Latest posts:   
+# Latest posts:   
 
 <ul class="posts">
-  {% for post in site.posts %}
+  {% for post in site.posts limit:8 %}
     <li><span>{{ post.date | date: "%Y-%m-%d" }}</span> - <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>

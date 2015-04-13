@@ -6,27 +6,27 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,p,blockquote,th,t
 /* @end */
 
 body {
-	font-family: "Helvetica",Palatino, georgia,"times new roman",sans-serif,Palatino;
+	font-family: "Galdeano","Hiragino Sans GB","Microsoft YaHei",Trebuchet,"Trebuchet MS",Tahoma,"Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif;
     background-color: white;
 	background-position: center -5em;
 }
 /* IE6 ignores this and uses default size of 1.1em */
-html>body { font-size: 1.1em; }
+html>body { font-size: 13px; }
 p { margin: 0 0 1.5em 0; text-align: justify; }
 a { text-decoration: none; color: #585858; }
 a:hover { text-decoration: underline; #585858; }
 h1,h2,h3,h4 { 
-    font-size: 1.5em;
+    font-size: 15px;
 	font-weight: normal; 
 	line-height: 100%;
     font-variant: normal; 
     margin: 1.5em 0 0.5em 0;
     clear: left; 	
-	font-family: "Helvetica",'lucida grande', sans-serif; 
+	font-family: "Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif; 
 }
-h1 { font-size: 130%; }
+h1 { font-size: 16px; }
 h2,h3,h4 { 
-    font-size: 120%; 
+    font-size: 14px; 
     margin: 0;   
 }
 sup { line-height: 1ex; }
@@ -42,7 +42,7 @@ sup { line-height: 1ex; }
 }
 #disqus_thread { padding-top: 0; }
 blockquote {
-	font-size: 1.1em;
+	font-size: 12px;
 	line-height: 120%;
 	padding: 0.2em 1.5em 0.2em 1.5em;
 	margin-left: 1.2em;
@@ -62,7 +62,7 @@ blockquote {
     font-family: "Helvetica",Palatino,georgia,"times new roman",serif;
 }
 #header h1 a{
-    font-size: 1em;
+    font-size: 13px;
 	font-weight: bold;
 	line-height: 0;
 	font-family: "Helvetica",Palatino, georgia, "times new roman", serif;
@@ -78,7 +78,7 @@ blockquote {
 }
 #header ul li { display: inline; }
 #header ul li a {
-    font-size: 1em;
+    font-size: 13px;
     line-height: 4em;
 	padding: 0.5em;
 	display: inline;
@@ -106,21 +106,22 @@ body #about #header a.about
 /* @group Code */
 pre {
 	margin: 1em 0 1.5em 0;
-	font-size: 1em; /* Hack to make code look same size as body font */  
+	font-size: 12px; /* Hack to make code look same size as body font */  
 	line-height: 130%;	
 	color: #111;
 	background: #F2F2F2;
 	border: 1px solid #ddc;
 	padding: 0.5em 1em;
     overflow: auto;
+    font-family: Menlo,"Andale Mono",Consolas,"Courier New",Monaco,monospace;    
 }
 pre:hover {
 	border-right: none;
 	overflow: auto;
 }
 code {
-    font-family: "Consolas","Helvetica",'lucida grande';
-	font-size: 1em;
+    font-family: Menlo,"Andale Mono",Consolas,"Courier New",Monaco,monospace;
+	font-size: 12px;
 	background-color: #F2F2F2;
 	line-height: 140%;
     height: 100px;
