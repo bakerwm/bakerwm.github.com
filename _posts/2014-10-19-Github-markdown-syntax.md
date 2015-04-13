@@ -21,7 +21,7 @@ comments: true
 
 * 图片    
 使用：`![Text]({{ base.url }}/assets/images/Aboutme.jpg)` 格式    
-![Local pic]({{ base.url }}/assets/images/Aboutme.jpg)
+![Local pic]({{ base.url }}/assets/images/Aboutme.jpg =600x)
 
 
 
@@ -124,14 +124,24 @@ Here's an idea: why don't we take `SuperiorProject` and turn it into `**Reasonab
 
     Check out this neat program I wrote:
 
+Code:    
+
     ```python
     x = 0
     x = 2 + 2
     what is x
-    ```
+    ```   
+Output:
+    
+```python
+x = 0
+x = 2 + 2
+what is x
+```
 
 ## 4. Task lists   
-见如下格式：
+
+Code:
  
 ```
 - [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
@@ -141,10 +151,18 @@ Here's an idea: why don't we take `SuperiorProject` and turn it into `**Reasonab
 ```
 
 显示效果如下：    
-- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported  
-- [x] list syntax required (any unordered or ordered list   supported)  
-- [x] this is a complete item  
-- [ ] this is an incomplete item  
+  - [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported  
+  - [x] list syntax required (any unordered or ordered list   supported)  
+  - [x] this is a complete item  
+  - [ ] this is an incomplete item  
+
+
+
+
+
+
+
+
 
 
 
