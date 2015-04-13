@@ -83,7 +83,7 @@ blockquote {
 #header h1 a{
     font-size: 16px;
 	font-weight: bold;
-	line-height: 0;
+	line-height: 20px;
 	font-family: "Helvetica",Palatino, georgia, "times new roman", serif;
 }
 #header ul {
@@ -208,6 +208,7 @@ pre > code {
 /* @group Signature */
 .signature { 
     font-size: 0.8em;
+    font-style: normal;
 	margin-top: 1em; 
 	float: right;
 }
