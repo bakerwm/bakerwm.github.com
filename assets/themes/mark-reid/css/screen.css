@@ -4,27 +4,47 @@
 /* @group Reset */
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,p,blockquote,th,td,abbr { margin:0; padding:0;}
 /* @end */
-
 body {
 	font-family: "Galdeano","Hiragino Sans GB","Microsoft YaHei",Trebuchet,"Trebuchet MS",Tahoma,"Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif;
     background-color: white;
 	background-position: center -5em;
 }
 /* IE6 ignores this and uses default size of 1.1em */
-html>body { font-size: 13px; }
+html>body { font-size: 13px; line-height: 20px;}
+img {
+max-width:100%;
+height:auto;
+border:0;
+-ms-interpolation-mode:bicubic;
+-webkit-border-radius:4px;
+-moz-border-radius:4px;
+border-radius:4px;
+}
+footer,header,nav,.show {
+display:block;
+}
+p img {
+clear:both;
+display:block;
+margin-left:auto;
+margin-right:auto;
+border:4px solid #FFF;
+-webkit-box-shadow:0 1px 3px #ccc;
+-moz-box-shadow:0 1px 3px #ccc;
+}
 p { margin: 0 0 1.5em 0; text-align: justify; }
 a { text-decoration: none; color: #585858; }
 a:hover { text-decoration: underline; #585858; }
 h1,h2,h3,h4 { 
-    font-size: 15px;
+    font-size: 13px;
 	font-weight: normal; 
-	line-height: 100%;
+	line-height: 20px;
     font-variant: normal; 
-    margin: 1.5em 0 0.5em 0;
+    margin: 0.5em 0 0.5em 0;
     clear: left; 	
 	font-family: "Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif; 
 }
-h1 { font-size: 16px; }
+h1 { font-size: 13px; }
 h2,h3,h4 { 
     font-size: 14px; 
     margin: 0;   
@@ -33,7 +53,6 @@ sup { line-height: 1ex; }
 #site {
 	max-width: 60em;
 	margin: 0.1em auto 0 auto;
-	line-height: 120%;
 }
 #page, #disqus_thread {
 	background: white;
@@ -62,7 +81,7 @@ blockquote {
     font-family: "Helvetica",Palatino,georgia,"times new roman",serif;
 }
 #header h1 a{
-    font-size: 13px;
+    font-size: 16px;
 	font-weight: bold;
 	line-height: 0;
 	font-family: "Helvetica",Palatino, georgia, "times new roman", serif;
@@ -85,7 +104,7 @@ blockquote {
 }
 #header ul li a:hover {
 	color: #1C1C1C;
-    background-color: #F2F2F2;
+    background-color: white;
     line-height: 100%;
 	border-bottom: none;
     text-decoration: none;
@@ -104,9 +123,50 @@ body #about #header a.about
 /* @end */
 
 /* @group Code */
+code,pre {
+font-family:Monaco,Menlo,"Courier New",monospace;
+font-size:13px;
+color:#111;
+-webkit-border-radius:3px;
+-moz-border-radius:3px;
+border-radius:3px;
+padding:0 3px 2px;
+}
+code {
+color:#2E2EFE;
+background-color:#f7f7f9;
+border:1px solid #e1e1e8;
+padding:3px 4px;
+}
+pre {
+display:block;
+font-size:13px;
+line-height:20px;
+background-color:#f5f5f5;
+border:1px solid rgba(0,0,0,0.15);
+-webkit-border-radius:4px;
+-moz-border-radius:4px;
+border-radius:4px;
+white-space:pre-wrap;
+word-break:break-all;
+margin:0 0 15px;
+padding:14.5px;
+}
+pre.prettyprint {
+margin-bottom:30px;
+background-color:#f7f7f9;
+border:1px solid #e1e1e8;
+padding:8px;
+}
+pre code {
+background-color:transparent;
+padding:0;
+border: none;
+}
+/*
 pre {
 	margin: 1em 0 1.5em 0;
-	font-size: 12px; /* Hack to make code look same size as body font */  
+	font-size: 12px;   
 	line-height: 130%;	
 	color: #111;
 	background: #F2F2F2;
@@ -155,11 +215,39 @@ pre > code {
     color: #DF0101;
     font-weight: normal;
 }
+pre > code {
+	background-color: transparent;
+} */
 /* @end */
+
+/* @group Footnotes */
+.footnotes { color: grey; }
+.footnotes:hover { color: black; }
+.footnotes ol li {
+	list-style-type: decimal;
+	list-style-position: inside;
+	font-size: 75%;
+	line-height: 1.5em;
+}
+.footnotes ol li > a { display: none; }
+/* @end */
+
+/* @group Signature */
+.signature { 
+    font-size: 0.8em;
+	margin-top: 1em; 
+	float: right;
+}
+.signature .author {
+    color: #DF0101;
+    font-weight: normal;
+}
+/* @end */
+
 
 /* @group Disqus */
 #disqus_thread {
-	margin-top: 2.93em;
+	margin-top: 1em;
 }
 .dsq-comment-body {
 	text-align: justify;
@@ -229,16 +317,18 @@ div.LTprovided { display: none; }
 
 /* @group Footer */
 #footer {
-	margin-top: 0;
+    margin: auto;
 	color: grey;
 	font-size: 87.5%;
 	line-height: 1.3em;
+    border-top: 1px solid silver;
 }
 #footer address {
 	position: relative;
 	margin: .5em 0 0 0;
 	text-align: right;
 }
+#footer p {font-size: 11px; font-style: normal; float: right; margin: auto;}
 #footer a {
 	font-style: normal;
 	color: #77d;
