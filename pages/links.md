@@ -24,3 +24,6 @@ comments: yes
 
   * 1 . [Ryan's Tutorials](http://ryanstutorials.net)         
   Linux Tutorial, Bash scripting, HTML Tutorial, CSS Turorial ...
+
+  * 2 . [Dave Tang's blog](http://davetang.org/)    
+  
