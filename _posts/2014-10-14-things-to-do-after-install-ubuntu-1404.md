@@ -13,31 +13,32 @@ tags: [ubuntu, install]
 ## 2. 安装软件：    
 * 1) 新立得件管理包：在`Ubuntu软件中心`搜索 新立得 即可。    
 * 2) Chromium: 在`Ubuntu软件中心`搜索并安装 chromium    
-* 3) 搜狗拼音for Linux：前往http://pinyin.sogou.com/linux/ 下载搜狗输入法for Linux, Ubuntu 14.04可直接双击deb包安装。    
-* 4) WPS office for Linux: 前往http://community.wps.cn/download/下载最新版 deb 包，双击安装即可    
+* 3) 搜狗拼音for Linux：前往[pinyin.sogou.com/linux/](http://pinyin.sogou.com/linux/) 下载搜狗输入法for Linux, Ubuntu 14.04可直接双击deb包安装。    
+* 4) WPS office for Linux: 前往[community.wps.cn/download](http://community.wps.cn/download/)下载最新版 deb 包，双击安装即可    
 * 5) VLC媒体播放器
 
 ## 3. 系统美化    
 
-* 1 更改中文字体    
+* 1. 更改中文字体    
 安装文泉驿黑字体   
 
 ```
 sudo apt-get install ttf-wqy-microhei
 ```
 
-* 2 删除原默认字体 ukai, uming    
+* 2. 删除原默认字体 ukai, uming    
 
 ```
 sudo apt-get remove fonts-arphic-ukai fonts-arphic-uming 
 ```
 
-* 3 主题美化工具    
+* 3. 主题美化工具    
 在`Ubuntu软件中心`安装美化工具 `Unity Tweak Tool`    
 或者前往 http://ubuntu-twewak.com/ 下载 `Ubuntu Tweak`的deb包，双击安装即可。    
 
-## 4. Adobe Flash Player
-* 1 安装Adobe Flash Player (pepper flash player)
+## 4. 安装 Adobe Flash Player
+
+* 1. 安装Adobe Flash Player (pepper flash player)
 
 ```
 sudo apt-get update
@@ -46,65 +47,68 @@ sudo apt-get install pepperflashplugin-nonfree
 sudo update-pepperflashplugin-nonfree --install
 ```
 
-* 2 软件中心搜索adobe flash player安装即可
+* 2. 软件中心搜索adobe flash player安装即可
 
-## 6. 安装Jekyll & git 管理github上的blog    
+## 5. 安装Jekyll & git 
+
 Jekyll 2 was recently released and can be installed on Ubuntu 14.04 using `apt-get` and `gem install`. Additional features such as Rdiscount can be added with the same meth od. Although there are packages for Jekyll in the Ubuntu repository, the packages are for older versions of Jekyll.
 See the reference:[Install Jekyll 2 on Ubuntu 14.04](http://michaelchelen.net/81fa/install-jekyll-2-ubuntu-14-04/)    
-### Step 1 Insall Prerequisites   
+
+* 1. Insall Prerequisites   
 Install ruby, the ruby development libraries, and the make command.
 
 ```
 sudo apt-get install ruby ruby-dev make
 ```
 
-### Step 2 Install Jekyll    
+* 2. Install Jekyll    
 Install the Jekyll gem system wide. To include all documentation, omit the `--no-rdoc  --no-ri` switches.
 
 ```
 sudo gem install jekyll --no-rdoc  --no-ri
 ```
 
-### Step 3 ExecJS Workaround    
+* 3. ExecJS Workaround    
 Install **nodejs** to work around this issue
 
 ```
 sudo apt-get install nodejs
 ```
 
-### Step 4 Start Jekyll    
+* 4. Start Jekyll    
 Check that Jekyll has been successfully installed.    
 
 ```
 jekyll -v
 ```
 
-### Step 5 Recommended    
+* 5. Recommended    
 Install other required packages.  
 
 ``` 
-# Install git
+- Install git
 sudo apt-get install git
 
-# Install Rdiscount Markdown renderer
+- Install Rdiscount Markdown renderer
 sudo gem install rdiscount  --no-rdoc --no-ri
 
-# Install Redcarpet Markdown renderer
+- Install Redcarpet Markdown renderer
 sudo gem install redcarpet  --no-rdoc --no-ri
 
-# Install 汉字to拼音 
+- Install 汉字to拼音 
 sudo gem install hz2py --no-rdoc --no-ri
 ```
 
-### Check you site locally    
+- Check you site locally    
 Start the website website HTML and start a local server.
 
 ```
 jekyll serve
 ```
 
-# 7. 安装Bioinfo-tools
-* 1 R 3.1.1 for ubuntu 14.04    
+# 6. 安装Bioinfo-tools
+
+* 1. R 3.1.1 for ubuntu 14.04    
 
 ```
 sudo add-apt-repository ppa:marutter/rrutter
@@ -113,44 +117,64 @@ sudo apt-get upgrade
 sudo apt-get install r-base r-base-dev
 ```
 
-* 2 Rstudio for ubuntu 14.04    
+* 2. Rstudio for ubuntu 14.04    
+
 前往 http://www.rstudio.com/products/rstudio/download/ 下载相应版本的 deb 包，双击安装。
 
-* 3 Bioconductor    
+* 3. Bioconductor    
 
 ```
 source("http://bioconductor.org/biocLite.R")
 biocLite()
+biocLite("DEG") # install package
 ```
 
-* 4 Biopython
-a. Install Biopython dependencies
-Numerical Python (NumPy)
+Check which package is available on the website of [Bioconductor](http://bioconductor.org).
+
+* 4. Biopython    
+
+Need to install the dependencies and biopython:
+
+  - a. Install Biopython dependencies
+
+```  
+# Numerical Python (NumPy)
 sudo apt-get install python-numpy python-scipy
-
-```
 # Check 
+python
+```
+
+```python
 >>> import numpy
 ```
 
-b. Install ReportLab
+  - b. Install ReportLab
+  
 The ReportLab package is a library for generating PDF documents.
 
 ```
 sudo pip install rlextra 
 -i https://wangm08@yeah.net:gongpeng!110@www.reportlab.com/pypi/
 # For an automated install, the command line must split over separate lines.
+```
 
+```python
 # Check
 >>> from reportlab.graphics import renderPDF
 ```
 
-c. Install Biopython
-Download biopython distribution: http://biopython.org/wiki/Download.
-Unpack the file with "tar -xzvpf biopython-**.tar.gz"
-Then move into the biopython* directory, and then install biopython with "sudo python setup.py install"
+  - c. Install Biopython
+  
+Download biopython distribution: [http://biopython.org/wiki/Download](http://biopython.org/wiki/Download).
 
-d. Check everything is worked
+```
+# Unpack the file with 
+tar -xzvpf biopython-**.tar.gz
+# Then change to the biopython* directory, and then install biopython 
+sudo python setup.py install
+```
+  - d. Check whether everything is worked
+  
 Option 1:
 
 ```python
@@ -168,22 +192,21 @@ python setup.py test
 ```
 
 * 5 Install third-party tools from Synaptic    
-a. NCBI Standalone BLAST    
-b. clustalo, libargtable,    
-c. EMBOSS,     
+
+  - a. NCBI Standalone BLAST    
+  - b. clustalo, libargtable,    
+  - c. EMBOSS,     
 
 * 6 Install samtools
 * 7 install bedtools  
 
   `sudo apt-get install bedtools`
 
-* 8 
-
-
+## 7. Q&A
 ============================
 1. Unable to access Windows partitions
 
-Error messages:
+- Error messages:
 
 ```
 Unable to access “OS”
@@ -194,7 +217,7 @@ Windows fully (no hibernation or fast restarting), or mount the volume
 read-only with the 'ro' mount option.
 ```
 
-**Solution**
+- **Solution**
 
 Run the following commands in your terminal:
 
@@ -207,7 +230,7 @@ the **NN** is the partition you want to mount, (in my examples, it is sda1)
 [Warnnings: I do not know whether this solution will crash your windows.]
 
 
-# 8. 修改启动顺序  
+## 8. 修改Ubuntu & Windows 双系统启动顺序  
 
 在Windows 8.1 系统上安装的 Ubuntu 15.04, 安装后默认的首选启动是： "Ubuntu"
 
