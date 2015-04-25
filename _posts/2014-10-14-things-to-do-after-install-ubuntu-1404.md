@@ -207,18 +207,82 @@ the **NN** is the partition you want to mount, (in my examples, it is sda1)
 [Warnnings: I do not know whether this solution will crash your windows.]
 
 
+# 8. 修改启动顺序  
+
+在Windows 8.1 系统上安装的 Ubuntu 15.04, 安装后默认的首选启动是： "Ubuntu"
+
+```
+×Ubuntu  
+  Advanced options for Ubuntu 
+  Memory test (memtest86+)  
+  Memory test (memtest86+, serial console 11520)
+  Windows 8 (loader) (on /dev/sda1)  
+```
+
+Ubuntu 15.04 using GRUB2 to manage the boot order.
+
+Two ways to modify the boot order:
+
+- 1 . recommended:
+
+```
+$ sudo mv /etc/grub.d/30_os-prober /etc/grub.d/08-os-prober
+```
+
+The above command is changing the name of `30_os-prober` to `08_os-prober` (06-09 is ok). The filename relate to Ubuntu boot are begin with "10_", so "08_" is prior to the Ubuntu. At last, we have to update the grub by `sudo update-grub`
+
+The output:  
+
+```
+$ sudo update-grub
+[sudo] password for ming: 
+Generating grub configuration file ...
+Found Windows 8 (loader) on /dev/sda1
+Found linux image: /boot/vmlinuz-3.19.0-10-generic
+Found initrd image: /boot/initrd.img-3.19.0-10-generic
+Found memtest86+ image: /memtest86+.elf
+Found memtest86+ image: /memtest86+.bin
+done
+```
+
+Done, it turns out that `Windows 8` is on the top.
 
 
+- 2 . alternative way
 
+Open the file `/etc/default/grub` and change the value of `GRUB_DEFAULT=` from `0` to `4` ( the 5th is windows, ubuntu begin with 0".
 
+```
+$ sudo vim /etc/default/grub
+```
 
+```
+# If you change this file, run 'update-grub' afterwards to update
+# /boot/grub/grub.cfg.
+# For full documentation of the options in this file, see:
+#   info -f grub -n 'Simple configuration'
+ 
+GRUB_DEFAULT=0  # change it to 4
+#GRUB_HIDDEN_TIMEOUT=0
+GRUB_HIDDEN_TIMEOUT_QUIET=true
+GRUB_TIMEOUT=10
+GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+GRUB_CMDLINE_LINUX=""
 
+...
 
+```
 
+Need to update the grub.
 
+```
+$ sudo update-grub
+```
 
+Done!
 
-
+Reboot and you will find the default boot option is `Windows 8`.
 
 
 
