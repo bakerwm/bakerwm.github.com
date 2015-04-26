@@ -10,7 +10,7 @@ section: home
 
 ![](/assets/images/Reads-mapping-to-Ra&Rv-ep.png)
 
-Figure. RNA-Seq analysis for bacteria.
+Figure. RNA-Seq analysis for bacteria.   
 
 =====================================
 
@@ -18,8 +18,6 @@ Figure. RNA-Seq analysis for bacteria.
 
 <ul class="posts">
   {% for post in site.posts limit:8 %}
-    <li><span>{{ post.date | date: "%Y-%m-%d" }}</span> - <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+  <li><span>{{ post.date | date: "%Y-%m-%d" }}</span> - <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
-
-
